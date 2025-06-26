@@ -9,6 +9,11 @@ const tab= createBottomTabNavigator();
 const TabNavigator=()=>
 {
     <tab.Navigator>
-          
+          <tab.Screen name="Home" component={Home} options={{headerShown:false, tabBarIcon:({color, size})=>(<Icon name="home" color={color} size={size}/>)}} />
+          <tab.Screen name="ProductList" component={ProductList} options={{headerShown:false
+          , tabBarIcon:({color, size})=>(<Icon name="list" color={color} size={size}/>)}} />
+            <tab.Screen name="ProductDetails" component={ProductDetails} options={{headerShown:false, tabBarIcon:({color, size})=>(<Icon name="information-circle" color={color} size={size}/>)}} />
+
     </tab.Navigator>
 }
+export default TabNavigator;
